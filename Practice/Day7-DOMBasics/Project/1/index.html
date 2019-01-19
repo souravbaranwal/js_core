@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Learning the DOM</title>
+  </head>
+
+  <body>
+    <h1>Document Object Model</h1>
+    <div id="root"></div>
+    <script>
+    var pTag = document.createElement('p');
+    pTag.textContent = 'Hello Javascript!';
+    pTag.innerHTML = 'I love <strong>Javascript</strong>';
+    var root = document.getElementById('root');
+    root.appendChild(pTag);
+    
+    var ulTag = document.createElement('ul');
+    root.appendChild(ulTag);
+
+    var liTag1 = document.createElement('li');
+    liTag1.textContent = 'Buy groceries';
+    ulTag.appendChild(liTag1);
+
+    var liTag2 = document.createElement('li');
+    liTag2.textContent = 'Feed the cat';
+    ulTag.appendChild(liTag2);
+
+    var liTag3 = document.createElement('li');
+    liTag3.textContent = 'Do Laundry';
+    ulTag.appendChild(liTag3);
+
+    let liTag4 = document.createElement('li');
+    liTag4.textContent = 'This is test for question number 5';
+    ulTag.appendChild(liTag4);  
+
+    ulTag.removeChild(ulTag.childNodes[3]);
+
+    </script>
+  </body>
+</html>
