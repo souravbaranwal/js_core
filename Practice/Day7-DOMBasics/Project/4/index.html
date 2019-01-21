@@ -12,5 +12,27 @@
     <li>Favorites:  <span id="favorites"></span>
     <li>Hometown: <span id="hometown"></span>
    </ul>
+
+   <script>
+    document.body.style.fontFamily = "Arial, sans-serif";
+    document.getElementById('nickname').innerHTML = "Sourav";
+    document.getElementById('favorites').innerHTML = "Chocolate";
+    document.getElementById('hometown').innerHTML = "Hazaribagh";
+
+   let liTag = document.getElementsByTagName('li');
+    for (let i = 0; i < liTag.length; i++) {
+      liTag[i].className = "listitem";
+    }
+
+  let liTagRed = document.querySelectorAll('.listitem');
+  console.log(liTagRed);
+   for (let i = 0; i < liTagRed.length; i++) {
+     liTagRed[i].style.color = "red";
+   }
+
+   let imgEl = document.createElement('img');
+   imgEl.src = "http://devfloat.net/wp-content/uploads/2014/01/beawesome-wallpaper.jpg";
+   document.body.appendChild(imgEl);
+   </script>
  </body>
 </html>

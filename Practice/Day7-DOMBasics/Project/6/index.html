@@ -20,6 +20,13 @@
       font-size: 10px;
       background-color: rgb(107, 167, 247);
     }
+    body {
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+    }
     
     .clock {
       width: 30rem;
@@ -58,7 +65,7 @@
   <script>
    const secondHand = document.querySelector('.second-hand');
    const minsHand = document.querySelector('.min-hand');
-   const hourdHand = document.querySelector('.hour-hand');
+   const hourHand = document.querySelector('.hour-hand');
 
    function setDate() {
     const now = new Date();
@@ -66,14 +73,14 @@
     const seconds = now.getSeconds();
     const secondDegrees = ((seconds / 60) * 360) + 90;
     secondHand.style.transform = `rotate(${secondDegrees}deg)`;
-    console.log(seconds);
+    
 
     const mins = now.getMinutes();
     const minsDegrees = ((mins / 60) * 360) + 90;
-    minHand.style.transform = `rotate(${minsDegrees}deg)`;
+    minsHand.style.transform = `rotate(${minsDegrees}deg)`;
 
     const hour = now.getMinutes();
-    const hourDegrees = ((mins / 12) * 360) + 90;
+    const hourDegrees = ((mins / 12) * 360) ;
     hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
    }
