@@ -5,7 +5,7 @@
  
 
 var todoInput = document.querySelector("#todo-text");
-var button = document.querySelector(".add-todo");
+// var button = document.querySelector(".add-todo");
 
 function addTodo() {
   if (todoInput.value) {
@@ -40,6 +40,8 @@ function toggleTodo(e) {
 
 
 displayTodo(todos);
+
+
 function displayTodo(array = []) {
   document.querySelector("ul").innerHTML = "";
   
@@ -55,7 +57,7 @@ function displayTodo(array = []) {
     let close = document.createElement('span');
     close.innerHTML = `<i class="fas fa-window-close" style="color:rgb(182, 182, 182);font-size:15px" ></i>`;
     close.setAttribute('data-index', index);
-
+    
     let parentSpan = document.createElement('span');
     parentSpan.className = 'parentSpan';
 
@@ -90,13 +92,13 @@ function displayTodo(array = []) {
 
 function updatePending() {
   let pending = todos.filter(todo => todo.todoStatus == false);
-  console.log(pending.length);
   document.querySelector('.pending').textContent = `${pending.length} items left`;
   // pending.length = document.querySelector('.pending').textContent;
 }
 
 function closeList(e) {
   var id = e.target.dataset.index;
+
   console.log(todos[id]);
   todos.splice(id,1);
   displayTodo(todos);
@@ -129,12 +131,21 @@ function clearList() {
   let clearListArr = todos.filter(todo => todo.todoStatus == false );
   displayTodo(clearListArr);
 }
-
-
 document.querySelector('.completed').addEventListener('click',completedList );
-
 todoInput.addEventListener('keydown', handleEnter);
 // button.addEventListener("click", addTodo);
+
+let checkAllCheckbox = document.querySelector('#checkAll');
+checkAll.addEventListener('change',checkAllList);
+function  checkAllList() {
+  todos.forEach((todo, index) => {
+    todo.todoStatus = checkAllCheckbox.checked;
+    
+  });
+  
+  displayTodo(todos);
+
+}
 
 
 

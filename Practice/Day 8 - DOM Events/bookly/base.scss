@@ -3,19 +3,20 @@
 	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
 	
+	
 }
-	$text-color1:#161616;
-	$text-color2:white;
-	$text-color3:#ECAF4E;
-	$text-color4:#713234;
-	$text-color5:#9A7A17;
-	$text-color6:rgb(170, 163, 159);
-	$text-color7: #8C710D;
-	$bg-color1:#ECAF4E;
-	$bg-color2:#F5E3D7;
-	$bg-color3:#fff;
-	$bg-color4:#FC683E;
-	$bg-color5:#161616;
+	// $text-color1:#161616;
+	// $text-color2:white;
+	// $text-color3:#ECAF4E;
+	// $text-color4:#713234;
+	// $text-color5:#9A7A17;
+	// $text-color6:rgb(170, 163, 159);
+	// $text-color7: #8C710D;
+	// $bg-color1:#ECAF4E;
+	// $bg-color2:#F5E3D7;
+	// $bg-color3:#fff;
+	// $bg-color4:#FC683E;
+	// $bg-color5:#161616;
 	
 /*=======================================*/
 /*  CSS Resets  */
@@ -176,90 +177,6 @@ body {
 /*=======================================*/
 /*  Main Css */
 /*=======================================*/
-
-.container {
-	background-color: #f5f5f5;
-	h1 {
-		color: #EBD7D7;
-	}
-}
-.content {
-	width: 50%;
-	margin: 0 auto;
-	box-shadow: 0px 0px 13px #c7c6c6;
-
-	.fa-chevron-circle-down {
-		font-size: 13px;
-	}
-	
-	
-	
-	.mainInput {
-		width: 90%;
-		height: 50px;
-		margin: 0;
-		border-radius: 0%;
-		
-	}
-	::placeholder {
-		color: rgb(206, 206, 206);
-		opacity: 1; /* Firefox */
-		font-size: 18px;
-	  }
-	input[type=text]:focus {
-		border: 1px solid rgb(226, 226, 226);
-	  }
-	li {
-		text-align: left;
-		background: white;
-		border: solid 1px rgb(226, 226, 226);
-		padding: 15px;
-		display: flex;
-		flex-wrap: wrap; 
-		justify-content: space-between;
-
-		input {
-			margin: 0 15px;
-			
-		}
-		span:first-child {
-			margin-right: 50px;
-		}
-		span:last-child {
-			margin-right: 5px;
-			
-		}
-		
-		
-	}
-
-}
-
-
-
-
-
-.bottom-bar {
-	display: flex;
-	justify-content: space-between;
-	border: solid 1px #e2e2e2;
-	text-align: center;
-	margin: 0 auto;
-	padding: 10px;
-	background: white;
-	color: rgb(110, 110, 110);
-	font-size: 13px;
-	.middle-tabs {
-		display: flex;
-		justify-content: space-between;
-		.all {
-			margin: 0 5px;
-		}
-		.active {
-			margin: 0 5px;
-		}
-		.completed {
-			margin: 0 5px;
-		}
-	}
+body {
+	background: #FFFFFF;
 }
