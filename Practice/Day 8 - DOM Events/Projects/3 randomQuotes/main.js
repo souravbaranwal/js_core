@@ -320,7 +320,8 @@ pTag.innerText = quotes[0].quoteText;
 
 function random() {
     let generate = Math.floor(Math.random() * quotes.length) ;
-    pTag.innerText = quotes[generate].quoteText;
+    pTag.innerText = `${quotes[generate].quoteText} by ${quotes[generate].quoteAuthor}`;
+   
 
 }
 

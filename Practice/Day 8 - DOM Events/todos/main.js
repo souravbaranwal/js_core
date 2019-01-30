@@ -1,8 +1,12 @@
 
- var todos = [{todoText: 'one',todoStatus: false},
-              {todoText: 'two',todoStatus: false}
-];
- 
+ var todos = JSON.parse(localStorage.getItem('item')) || [{todoText: 'one',todoStatus: false}, {todoText: 'two',todoStatus: false}];
+
+localStorage.setItem('todos', JSON.stringify(todos));
+
+/* let localStorage = {};
+localStorage.setItem(name, Obj itemContent) {
+  localStorage[name] = itemContent;
+} */
 
 var todoInput = document.querySelector("#todo-text");
 // var button = document.querySelector(".add-todo");
@@ -16,6 +20,7 @@ function addTodo() {
     todos.push(newTodo);
     
     displayTodo(todos);
+    localStorage.setItem('item', JSON.stringify(todos));
   }
   todoInput.value = "";
   
@@ -36,6 +41,7 @@ function toggleTodo(e) {
 
   //todos[id].todoStatus ? document.querySelector("span[data-index='"+id+"']").style.textDecoration= "line-through" : document.querySelector("span[data-index='"+id+"']").style.textDecoration = "none" ;
   displayTodo(todos);
+  localStorage.setItem('item', JSON.stringify(todos));
 }
 
 
@@ -79,7 +85,6 @@ function displayTodo(array = []) {
     close.addEventListener("click", closeList);
     updatePending();
     
-
   }
   
   
@@ -98,10 +103,10 @@ function updatePending() {
 
 function closeList(e) {
   var id = e.target.dataset.index;
-
   console.log(todos[id]);
   todos.splice(id,1);
   displayTodo(todos);
+  localStorage.setItem('item', JSON.stringify(todos));
 }
 
 

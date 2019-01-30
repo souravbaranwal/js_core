@@ -1,0 +1,115 @@
+*:focus {
+  outline: none; }
+
+body {
+  background-image: url(../img/wallpaper_475189803.jpg);
+  background-size: cover; }
+  body .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center; }
+
+.todoApp {
+  width: 20%;
+  margin: 20px;
+  box-shadow: 0px 0px 13px #c7c6c6;
+  padding: 10px;
+  transition-duration: 0.8s; }
+  .todoApp .mainInput {
+    width: 65%;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    padding: 5px;
+    color: #aaaaaa;
+    background: rgba(255, 0, 0, 0); }
+  .todoApp button {
+    margin-bottom: 0px;
+    padding: .45rem 2rem;
+    font-weight: 600;
+    border: none;
+    background: #ffffff0a;
+    color: white;
+    height: 40px;
+    box-shadow: 0px 0px 13px #f5f5f5af; }
+  .todoApp li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 8px; }
+    .todoApp li span {
+      margin: 0 5px 0px; }
+    .todoApp li span.todo-text {
+      color: white; }
+    .todoApp li .newTodo {
+      border: none;
+      color: #aaaaaa;
+      background: rgba(255, 0, 0, 0);
+      text-align: center; }
+  .todoApp ul {
+    padding: 0;
+    margin-top: 10px; }
+
+.todoApp:hover {
+  box-shadow: 0px 0px 13px #af3a3a; }
+
+.strikeout {
+  text-decoration: line-through; }
+
+.quoteSection {
+  width: 100%;
+  margin-top: 100px; }
+  .quoteSection p {
+    color: #b1b1b1;
+    font-size: 25px;
+    font-family: 'Special Elite', cursive; }
+
+.clockParent {
+  width: 50%; }
+
+.clock {
+  width: 100px;
+  height: 100px;
+  background-origin: 20px solid white;
+  border-radius: 50%;
+  margin: 10px 15px;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0px 0px 13px #c7c6c6;
+  transition-duration: 0.8s; }
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translate(-3px); }
+
+.hand {
+  width: 50%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); }
+
+.clock:hover {
+  box-shadow: 0px 0px 13px #af3a3a; }
+
+.websiteIconsParent {
+  width: 100%;
+  margin-top: 200px; }
+  .websiteIconsParent .websiteIcons li {
+    display: inline-block; }
+    .websiteIconsParent .websiteIcons li i {
+      font-size: 50px;
+      color: #3e2424;
+      margin: 0 20px;
+      transition-duration: 0.8s; }
+    .websiteIconsParent .websiteIcons li i:hover {
+      color: #af3a3a; }
+
+/*# sourceMappingURL=main.css.map */

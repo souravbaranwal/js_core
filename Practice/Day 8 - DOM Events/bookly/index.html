@@ -6,37 +6,36 @@
     <title>To Do App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
-    />
+    
     <link rel="stylesheet" href="style.css" />
     
   </head>
 
   <body class="text-center">
+
     <div class="container">
+
        <section class="search-parent">
          <h1>Bookly</h1>
-         <h4>Best Books for You</h4>
-         <input type="text" name="" id="" placeholder="Search books...">
+         <p>Best Books for You</p>
+         <input type="text" name="" id="searchBook" placeholder="Search books...">
        </section>
+
        <section class="content-parent">
          <h2>Books To Read</h2>
-         <div>
-           <ul></ul>
+
+         <div class="list">
+           <ul id="bookList"> </ul>
         </div>
-        <div>
-          <span>
-            <input type="checkbox" name="" id="">
-          </span>
-          <span>
-            <p>Hide all books</p>
-          </span>
+
+        <div class="hideBookSection">
+            <input type="checkbox" name="" id="hideBooks">
+            <label for="hideBooks">Hide All Books</label>
         </div>
-        <div>
-          <input type="text" name="" id="" placeholder="Add a book...">
-          <button>Add</button>
+
+        <div class="addBookSection">
+          <input type="text" name="" id="bookInput" placeholder="Add a book...">
+          <button id="addBtn" >Add</button>
         </div>
        </section>
      </div>
