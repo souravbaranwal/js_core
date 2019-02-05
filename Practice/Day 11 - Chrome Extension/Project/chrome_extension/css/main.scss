@@ -15,7 +15,7 @@ body {
 }
 
 .todoApp {
-    width: 20%;
+    width: 25%;
     margin: 20px;
     box-shadow: 0px 0px 13px #c7c6c6;
     padding: 10px;
@@ -38,58 +38,69 @@ body {
         font-weight: 600;
         border: none;
         background: #ffffff0a;
-        color: white;
-        height: 40px;
-        box-shadow: 0px 0px 13px #f5f5f5af;
+        color: rgba(172, 172, 172, 0.719);
+        height: 30px;
+        box-shadow: 0px 0px 5px #f5f5f542;
+    }
+    button:hover {
+        background: #99999971;
+        transition-duration: 0.8s;
     }
     li {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 8px;
+        padding: 10px;
+        transition-duration: 0.8s;
         span {
             margin: 0 5px 0px;
         }
         span.todo-text {
-            color: white;
+            color: rgba(172, 172, 172, 0.719);
+            font-size: 18px;
         }
         .newTodo {
             border: none;
             color: #aaaaaa;
             background: rgba(255, 0, 0, 0);
             text-align: center;
+            font-size: 15px;
+            
         }
-        
-
+        .fa-window-close {
+            color:rgb(182, 182, 182);
+            font-size: 14px;
+        }
+    }
+    li:hover {
+        background: rgba(128, 128, 128, 0.233);
+        border-radius: 5px;
     }
     ul {
         padding: 0;
         margin-top: 10px;
     }
-    
 }
 .todoApp:hover {
     
-    box-shadow: 0px 0px 13px #af3a3a;
+    box-shadow: 0px 0px 25px #c7c6c6;
+    transform: scale(1.02);
 
 }
-
 
 .strikeout {
     text-decoration: line-through;
 }
 
-
 // Quote Section
 .quoteSection {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 50px;
     
     p {
         color: #b1b1b1;
         font-size: 25px;
         font-family: 'Special Elite', cursive;
-        
     }
     
 }
@@ -122,7 +133,7 @@ body {
   .hand {
     width: 50%;
     height: 2px;
-    background: white;
+    background: rgba(255, 255, 255, 0.315);
     position: absolute;
     top: 50%;
     transform-origin: 100%;
@@ -132,7 +143,42 @@ body {
     
   }
 .clock:hover {
-    box-shadow: 0px 0px 13px #af3a3a;
+    box-shadow: 0px 0px 25px #c7c6c6;
+    transform: scale(1.03);
+
+}
+
+
+// Google Search 
+.googleSearchBar {
+    margin: 0 auto;
+    text-align: center;
+    input {
+        width: 180%;
+        height: 35px;
+        border-radius: 15px;
+        border: none;
+        padding: 5px;
+        text-align: center;
+        color: rgb(206, 206, 206);
+        box-shadow: 0px 0px 13px #c7c6c6;
+        font-size: 15px;
+        transition-duration: 0.8s;
+        background: rgba(233, 233, 233, 0);
+        margin-top: 30px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        margin-left: 50px;
+        transform: translateX(-30%);
+        
+    }
+    input:hover {
+        box-shadow: 0px 0px 18px #c7c6c6;
+    }
+    input:focus {
+        width: 250%;
+    }
+    
 }
 
 
@@ -147,13 +193,36 @@ body {
             display: inline-block;
             i {
                 font-size: 50px;
-                color: #3e2424;
+                color: #ffffff8f;
                 margin: 0 20px;
                 transition-duration: 0.8s;
             }
             i:hover {
-                color: #af3a3a;
+                color: #1d191942;
+                transform: scale(1.4);
+                box-shadow: 0px 0px 18px #c7c6c6;
             }
         }
     }
+}
+
+// Greet Section 
+.greetSection {
+    width: 100%;
+    .greetInput {
+        display: none;
+    }
+    .greetText {
+        color: #b1b1b1;
+        font-size: 25px;
+        font-family: 'Special Elite', cursive;
+    }
+}
+
+.hideIt {
+    display: none
+}
+
+.showIt {
+    display: inline-block;
 }

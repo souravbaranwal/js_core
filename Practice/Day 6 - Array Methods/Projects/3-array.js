@@ -16,6 +16,16 @@ var words = [
 // (indexOf)
 
 
+let uniqueArray = words => {
+  let newArray = [];
+  words.forEach(word => {
+      (newArray.includes(word) == false) ? newArray.push(word) : '';
+  });
+  console.log(newArray);
+}
+
+
+
 
 var words2 = [
   'machine',
@@ -28,7 +38,11 @@ var words2 = [
   'disobedience'
 ];
 
-// Write a function doesWordExist that will take in an array of words as one argument, and a word to search for as the other. Return true if it exists, otherwise, return false. Don't use indexOf for this one.
+// Write a function doesWordExist that will take in an array of words as one argument, and a word to search for as the other.
+//  Return true if it exists, otherwise, return false. Don't use indexOf for this one.
+
+let doesWordExist = (words2, wordToSearch) =>   words2.includes(wordToSearch);
+
 
 
 
@@ -48,9 +62,9 @@ var words3 = [
 ];
 
 
-// Write a function howManyTimes that will take in an array of words as one argument, and a word to search for as the other. The function will return the number of times that word appears in the array.
-
-
+// Write a function howManyTimes that will take in an array of words as one argument, and a word to search for as the other. 
+// The function will return the number of times that word appears in the array.
+let howManyTimesss = (words3, wordToSearch) => words3.filter( word => word.includes(wordToSearch)).length;
 
 
 
@@ -74,6 +88,9 @@ let data = [
   }
 ]
 
+let newData = data.filter(country => country.country != 'China');
+let totalPopulation = newData.reduce((total, population) => total + population.pop, 0);
+console.log(object);
 
 // Use reduce method and summorize the collection like
 // { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }
@@ -90,6 +107,8 @@ const fruitBasket = [
   'orange',
   'fig'
 ];
+
+fruitBasket.reduce((accumulator, currentVAlue) )
 
 
 

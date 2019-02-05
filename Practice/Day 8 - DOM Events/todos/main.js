@@ -30,14 +30,7 @@ function toggleTodo(e) {
   todos[id].todoStatus = !todos[id].todoStatus;
   document.querySelector('span');
 
-  if (todos[id].todoStatus) {
-    document.querySelector("span[data-index='"+id+"']").style.textDecoration = "line-through" ;
-    document.querySelector("span[data-index='"+id+"']").style.color ="grey";
 
-  } else {
-    document.querySelector("span[data-index='"+id+"']").style.textDecoration = "none" ;
-    document.querySelector("span[data-index='"+id+"']").style.color ="black";
-  }
 
   //todos[id].todoStatus ? document.querySelector("span[data-index='"+id+"']").style.textDecoration= "line-through" : document.querySelector("span[data-index='"+id+"']").style.textDecoration = "none" ;
   displayTodo(todos);

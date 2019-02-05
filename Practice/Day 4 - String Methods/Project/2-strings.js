@@ -20,14 +20,14 @@ function occurrence(String, substr) {
     String = String.split(" ");
     return String.filter(i => i.toLowerCase() === substr).length;
 }
-console.log(occurrence('The world of the dogs', 'the')); 
+console.log(occurrence('The world of the dogs', 'the'));
 
 
 
 //  Write a JavaScript function to strip leading and trailing spaces from a string.
 // Input (String) -> ('Hello World   ')
 // Output String -> "Hello World"
-function strip(str){
+function strip(str) {
     return str.trim();
 };
 console.log(strip('Hello World   '));
@@ -42,25 +42,23 @@ function truncate(string, number) {
 // Write a JavaScript function to alphabetize a given string.(A - z)
 // Input (String) -> 'United States'
 // Output 'SUadeeinsttt'
-function alphabetize_string(str){
+function alphabetize_string(str) {
     return str.split('').sort().join('');
-    };
+};
 
 // Write a JavaScript function to test case insensitive (except special Unicode characters) string comparison.
 // Input ( String String) -> ('abcd', 'AbcD')
 // Output Boolean -> true
 // ('ABCD', 'Abce') -> false
-function testInsensitive(string1, string2)
-{
-var x = string1.toUpperCase() === string2.toUpperCase();
-  return x;
+function testInsensitive(string1, string2) {
+    var x = string1.toUpperCase() === string2.toUpperCase();
+    return x;
 }
 console.log(testInsensitive('abcd', 'AbcD'));
 console.log(testInsensitive('ABCD', 'Abce'));
 
-function testInsensitive(string1, string2)
-{
-    if (string1.toUpperCase() === string2.toUpperCase())  {
+function testInsensitive(string1, string2) {
+    if (string1.toUpperCase() === string2.toUpperCase()) {
         console.log('true');;
     } else {
         console.log('false');;

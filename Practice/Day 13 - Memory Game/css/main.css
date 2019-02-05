@@ -1,0 +1,33 @@
+*:focus {
+  outline: none; }
+
+body {
+  background-image: url(../img/wallpaper_475189803.jpg);
+  background-size: cover; }
+  body .container {
+    text-align: center; }
+
+.boxParent {
+  display: grid;
+  grid-template-columns: 150px 150px 150px 150px;
+  grid-gap: 20px;
+  justify-content: center;
+  padding: 15px;
+  background: #EEEEEE;
+  width: 700px;
+  margin: 0 auto;
+  border-radius: 15px; }
+
+.box {
+  background: #2c2c2c;
+  height: 150px;
+  border-radius: 15px; }
+  .box i {
+    color: #EEEEEE;
+    font-size: 130px;
+    display: none; }
+
+.unhide i {
+  display: inline-block; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,16 +1,16 @@
 // Write a JavaScript function to check whether an `input` is a string or not.
-let ifString = function(input) {
+let ifString = function (input) {
     let typeInput = typeof input;
     //  console.log(typeInput);
-     if (typeInput == 'string') {
+    if (typeInput == 'string') {
         console.log(`${typeInput} is a string`);
-     } else {
-         console.log(`${typeInput} is not a string`);
-     }
- }
+    } else {
+        console.log(`${typeInput} is not a string`);
+    }
+}
 
 // Write a JavaScript function to check whether a string is blank or not.
-let ifBlank = function(input) {
+let ifBlank = function (input) {
     if (input.length === 0) {
         console.log('this is a blank string');
     } else {
@@ -31,10 +31,10 @@ console.log(stringArray('Hello World In Javascript'));
 // Input -> (string, number) -> ('Hello World!', 4)
 // Ouptut -> String -> "Hell"
 extract = function (str, length) {
-  
+
     return str.slice(str, length);
 };
-console.log(extract('Hello world!',4));
+console.log(extract('Hello world!', 4));
 
 // Write a JavaScript function to convert a Full Name like (Rahul Dravid) -> (Rahul D.)
 // Input -> (String)
@@ -57,31 +57,31 @@ function hideMail(str) {
     var arr = str.split("");
     arr.splice(5, 6, "...");
     return arr.join("");
-    }
-    console.log(hideMail("someone@altcampus.io"));
+}
+console.log(hideMail("someone@altcampus.io"));
 
 // Write a JavaScript function to parameterize a string
 // Input -> (String) -> ('The Perks Of Being A Wallflower')
 // Output -> (String) -> 'the-perks-of-being-a-wallflower
-function paraString (str) {
+function paraString(str) {
     let sentence = str.toLowerCase();
     sentence = sentence.split(' ').join('-');
     return sentence;
-    }
-    console.log(paraString("The Perks Of Being A Wallflower"));
+}
+console.log(paraString("The Perks Of Being A Wallflower"));
 
 // Write a JavaScript function to capitalize the first letter of every Word of a string.
 // Inpput -> (String) -> 'hello Batman from India'
 // Output -> (String) -> 'Hello Batman From India'
 function capitalize(str) {
-    let result= str.split(" ");
-    
+    let result = str.split(" ");
+
     for (let i = 0; i < result.length; i++) {
-    result[i] = result[i].charAt(0).toUpperCase() + result[i].slice(1, result[i.length]);
+        result[i] = result[i].charAt(0).toUpperCase() + result[i].slice(1, result[i.length]);
     }
     return result.join(" ");
-    }
-    console.log(capitalize('hello Batman from India'));
+}
+console.log(capitalize('hello Batman from India'));
 
 // Write a JavaScript function that takes a string which has lower and upper case letters as a parameter and converts upper case letters to lower case, and lower case letters to upper case.
 // Input (String) -> 'AaBbcVv'
@@ -90,16 +90,16 @@ function convertCasing(str) {
     var new_str = "";
     var a = str.length;
     for (var i = 0; i < a; i++) {
-    if (str[i] === str[i].toLowerCase()) {
-    new_str = new_str + str[i].toUpperCase();
-    } else {
-        new_str = new_str + str[i].toLowerCase();
-    }
+        if (str[i] === str[i].toLowerCase()) {
+            new_str = new_str + str[i].toUpperCase();
+        } else {
+            new_str = new_str + str[i].toLowerCase();
+        }
     }
     return new_str;
-    }
-    
-    console.log(convertCasing('AaBbc'));
+}
+
+console.log(convertCasing('AaBbc'));
 
 
 // Write a JavaScript function to convert a string into camel case.
@@ -108,7 +108,7 @@ function convertCasing(str) {
 
 var splitted = "Learning about js".split(' ');
 var mapped = splitted.map((value, index) => {
-    if(index === 0){
+    if (index === 0) {
         return value.toLowerCase()
     } else {
         var splitArr = value.split(''); //["a","b","o"]
@@ -121,13 +121,15 @@ mapped.join('');
 // Write a JavaScript function to uncamelize a string
 // Input (String) -> 'LearningAboutJs'
 // Output -> 'Learning About Js'
-function  camalCase(str) {
+function camalCase(str) {
     var newString = str.split('');
     for (let i = 0; i > newString.length; i++) {
         if (newString[i] === newString[i].toUpperCase) {
             newString = newString + ' ';
-        }   newString = newString + str[i];
-    }   return newString;
+        }
+        newString = newString + str[i];
+    }
+    return newString;
 }
 
 
@@ -147,23 +149,22 @@ function  camalCase(str) {
 // Output -> 'Hello!Hello!Hello!Hello!'
 function repeat(string, number) {
     var res = '';
-    if(typeof number === 'undefined') {
-    res = string;
-    return string;
+    if (typeof number === 'undefined') {
+        res = string;
+        return string;
+    } else {
+        res = string.repeat(number);
+        return res;
     }
-    else{
-    res = string.repeat(number);
-    return res;
-    }
-    };
-    console.log(repeat('Hello!',4));
+};
+console.log(repeat('Hello!', 4));
 
 
 // Write a JavaScript function to humanized number
 // Input -> (Number) -> 1 or 2
 // Output -> (String) -> 1st or 2nd
 function humanization(input) {
-    for (let i = 0, i < input )
+    for (let i = 0, i < input)
 }
 
 // Make a note of all the methods and properties of string and number with these requirements:
@@ -175,123 +176,147 @@ function humanization(input) {
 // 5. Return (Data Type)
 // 6. Example
 
-Method Name-
-charAt()
-Syntex-
-str.charAt(index)
-Description-
-charAt() returns a new string consisting of the single UTF-16 code ubit located at the specified offset into the string.
-Characters are indexed from left to RTCIceGatherer,index of first character is 0 and last character is string.Name.length -1.
-If index supplied if out of range ,JS returns an empty string.
-Argument-
-any integer between 0 and 1 - length of the string.If no index is provided the default is 0 and the first character is returned.Argument
-return-
-a string at the specified index,empty if index is out of range.Argument
+Method Name -
+    charAt()
+Syntex -
+    str.charAt(index)
+Description -
+    charAt() returns a new string consisting of the single UTF - 16 code ubit located at the specified offset into the string.
+Characters are indexed from left to RTCIceGatherer, index of first character is 0 and last character is string.Name.length - 1.
+If index supplied
+if out of range, JS returns an empty string.
+Argument -
+    any integer between 0 and 1 - length of the string.If no index is provided the
+default is 0 and the first character is returned.Argument
+return -
+    a string at the specified index, empty
+if index is out of range.Argument
 example -
-var name = "simba";
+    var name = "simba";
 console.log(name.charAt(0));
 displayes - "s"
 
-Method name-
-charCodeAt()
+Method name -
+    charCodeAt()
 Syntex -
-str.charCodeAt(index)
+    str.charCodeAt(index)
 Description -
-it returns an integer between 0 and 65535 representing the UTF-16 code unit at the given index.
-it  will always return a value that is less than 65536.
+    it returns an integer between 0 and 65535 representing the UTF - 16 code unit at the given index.
+it will always
+return a value that is less than 65536.
 Arguments -
-any intiger greater of=r equal to 0 and less than the length of the string; if it is not a number, it defaults to 0.
-return value-
-A number representing the UTF-16 code unit value of the character at the given index; NaN if index is out of range.
-example-
-var sentence = 'The quick brown fox jumped over the lazy dog.';
+    any intiger greater of = r equal to 0 and less than the length of the string;
+if it is not a number, it defaults to 0.
+return value -
+    A number representing the UTF - 16 code unit value of the character at the given index;
+NaN
+if index is out of range.
+example -
+    var sentence = 'The quick brown fox jumped over the lazy dog.';
 var index = 4;
 console.log('The character code ' + sentence.charCodeAt(index) + ' is equal to ' + sentence.charAt(index));
 returns - "The character code 113 is equal to q"
 
 
 Method Name -
-Concat()
+    Concat()
 Syntex -
-str.concat(string2[, string3, ...RTCIceGatherer., stringN])
+    str.concat(string2[, string3, ...RTCIceGatherer., stringN])
 Description -
-The concat() function concatenates the string arguments to the calling string and returns a new string. Changes to the original string or the returned string don't affect the other. If the arguments are not of the type string, they are converted to string values before concatenating.
+    The concat()
+function concatenates the string arguments to the calling string and returns a new string.Changes to the original string or the returned string don 't affect the other. If the arguments are not of the type string, they are converted to string values before concatenating.
 Argument -
-string2...stringN
+    string2...stringN
 Strings to concatenate to this string.
 Return -
-A new string containing the combined text of the strings provided.
+    A new string containing the combined text of the strings provided.
 Example -
-let hi = "Hi, ";
+    let hi = "Hi, ";
 console.log(hi.concat("Raj", ". Have a nice day."));
-returns- Hi, Raj. Have a nice day.
+returns - Hi, Raj.Have a nice day.
 
 Method Name -
-endsWith()
+    endsWith()
 Syntex -
-str.endsWith(searchString[, length])
+    str.endsWith(searchString[, length])
 Description -
-The endsWith() method determines whether a string ends with the characters of a specified string, returning true or false
+    The endsWith() method determines whether a string ends with the characters of a specified string, returning true or false
 Argument -
-searchString ,The characters to be searched for at the end of this string.
-length ,Optional. If provided it is used as the length of str. If omitted, the default value is the length of the string.
+    searchString, The characters to be searched
+for at the end of this string.
+length, Optional.If provided it is used as the length of str.If omitted, the
+default value is the length of the string.
 returns -
-true or false depending on if character is found or not.concat
+    true or false depending on
+if character is found or not.concat
 example -
-let greetings = "How are you."
+    let greetings = "How are you."
 console.log(str.endsWith("you."));
-will return true.endsWith
+will
+return true.endsWith
 
- Method name-
- includes()
- syntex - 
- str.includes(searchString[, position])
+Method name -
+    includes()
+syntex -
+    str.includes(searchString[, position])
 Description -
-is case sensetive.determines whether one string may be found within another string, returning true or false as appropriate.
+    is
+case sensetive.determines whether one string may be found within another string, returning true or false as appropriate.
 argument -
-searchString -A string to be searched for within this string.
-postion(optional)- position within the string at whch to begin searching for searchString.default is 0.
+    searchString - A string to be searched
+for within this string.
+postion(optional) - position within the string at whch to begin searching
+for searchString.default is 0.
 Return -
-true of false if string is found or not found.includes
+    true of false
+if string is found or not found.includes
 example -
-const str = "How are you";
+    const str = "How are you";
 console.log(str.includes("are"));
-returns -true.
+returns - true.
 
 method name -
-indexOf()
+    indexOf()
 syntex -
-str.indexOf(searchValue[, fromIndex])
+    str.indexOf(searchValue[, fromIndex])
 Description -
-Characters in a string are indexed from left to right. The index of the first character is 0, and the index of the last character of a string called stringName is stringName.length - 1
-returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex. Returns -1 if the value is not found.
+    Characters in a string are indexed from left to right.The index of the first character is 0, and the index of the last character of a string called stringName is stringName.length - 1
+returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex.Returns - 1
+if the value is not found.
 
 argument -
-returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex. Returns -1 if the value is not found.
+    returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex.Returns - 1
+if the value is not found.
 returns -
-The index of the first occurrence of searchValue, or -1 if not found.
+    The index of the first occurrence of searchValue, or - 1
+if not found.
 An empty string searchValue will match at any index between 0 and str.length
 example -
-const greetings = 'How are you?';
+    const greetings = 'How are you?';
 console.log(greetings.indexOf('w'));
 logs 2;
 
 Method Name -
-lastIndexof()
-Syntex-
-str.lastIndexOf(searchValue[, fromIndex])
+    lastIndexof()
+Syntex -
+    str.lastIndexOf(searchValue[, fromIndex])
 Discription -
-returns the index within the calling String object of the last occurrence of the specified value, searching backwards from fromIndex. Returns -1 if the value is not found.
+    returns the index within the calling String object of the last occurrence of the specified value, searching backwards from fromIndex.Returns - 1
+if the value is not found.
 Argument -
-searchValue- A string representing the value to search for. If searchValue is an empty string, then fromIndex is returned.
-fromIndex (optional) -The index of the last character in the string to be considered as the beginning of a match. The default value is +Infinity. If fromIndex >= str.length, the whole string is searched. If fromIndex < 0,  the behavior will be the same as if it would be 0.
+    searchValue - A string representing the value to search
+for.If searchValue is an empty string, then fromIndex is returned.
+fromIndex(optional) - The index of the last character in the string to be considered as the beginning of a match.The
+default value is + Infinity.If fromIndex >= str.length, the whole string is searched.If fromIndex < 0, the behavior will be the same as
+if it would be 0.
 Returns -
-The index of the last occurrence of the specified value; -1 if not found.
+    The index of the last occurrence of the specified value; - 1
+if not found.
 example -
-let greet = "How are you?";
+    let greet = "How are you?";
 let searchTerm = a;
 console.log(greet.lastIndexOf(searchTerm));
-output : 3;
+output: 3;
 
 // Method Name-
 // match()
@@ -300,24 +325,25 @@ output : 3;
 // Discription -
 
 Method Name -
-padEnd()
+    padEnd()
 Syntex -
-str.padEnd(targetLength [, padString])
+    str.padEnd(targetLength[, padString])
 Discription -
-pads the current string with a given string (repeated, if needed) so that the resulting string reaches a given length. The padding is applied from the end (right) of the current string.
+    pads the current string with a given string(repeated,
+        if needed) so that the resulting string reaches a given length.The padding is applied from the end(right) of the current string.
 Argument -
-targetLength -length of the resulting string once te current string has been padded
-If the value is lower than the current string's length, the current string will be returned as is.
+    targetLength - length of the resulting string once te current string has been padded
+If the value is lower than the current string 's length, the current string will be returned as is.
 Return -
-A String of the specified length with the pad string applied at the end of the current string.
+    A String of the specified length with the pad string applied at the end of the current string.
 Example -
-'hello'.padEnd(8);
-outputs -'hello   '
+    'hello'.padEnd(8);
+outputs - 'hello   '
 
-Method Name-
-padStart()
+Method Name -
+    padStart()
 Syntex -
-str.padStart(targetL` [, padString])
+    str.padStart(targetL ` [, padString])
 Discription-
 pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start (left) of the current string.
 Argument -
@@ -466,4 +492,3 @@ console.log(strObj);
 // displays String{'hello'}
 console.log(strObj.valueOf());
 // displays 'hello' .
-

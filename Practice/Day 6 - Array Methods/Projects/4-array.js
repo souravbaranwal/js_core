@@ -30,9 +30,18 @@ var data = [
 // 1 human year = 7 dog year
 // Solution is 105
 
+let totalDogAge = data => {
+  let totalAge = data.filter(age => age.type == 'dog').map(dog => dog.age * 7).reduce((total, age) => total + age, 0);
+  return totalAge
+}
+
 
 // Write the same function using
 // 1. filter - for filtering the cat or dog
 // 2. map - to multiply human year to dog year
 // 3. reduce - to accumulate total age.
 // Solution 105
+let totalDogAge = data => {
+  let totalAge = data.filter(age => age.type == 'dog').map(dog => dog.age * 7).reduce((total, age) => total + age, 0);
+  return totalAge
+}

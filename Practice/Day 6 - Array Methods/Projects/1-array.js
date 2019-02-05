@@ -7,93 +7,62 @@ var strings = ['this','is','a','collection','of','words'];
 
 
 // Find largest number in numbers
-var largestNumber = numbers.reduce(function(a,b){
-    // return a > b ? a : b;
-    if (a > b) {
-        return a ;
-    } else {
-        return b;
-    }
-});
-console.log(largestNumber);
+let largestNumber = numbers.sort((num1, num2) => num1 - num2);
+console.log(largestNumber[largestNumber.length - 1]);
 
 // Find longest string in strings
-var largestString = strings.reduce(function(a,b){
-    // return a > b ? a : b;
-    if (a.length > b.length) {
-        return a ;
-    } else {
-        return b;
-    }
-});
-console.log(largestString);
-
-
+let longestString = strings.sort((str1, str2) => str1.length - str2.length );
+console.log(longestString[longestString.length - 1]);
 // Find all the even numbers
-
-let result = numbers.filter(function(number) {
-    return (number % 2 === 0)
-})
-console.log(result);
+let evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers);
 
 // Find all the odd numbers
+let oddNumbers = numbers.filter(num => num % 2 !== 0);
+console.log(oddNumbers);
 
-let result = numbers.filter(function(number) {
-    return (number % 2 !== 0)
-})
-console.log(result);
-
-// Find all the words that contain 'is' use string method 'contains'
-
+// Find all the words that contain 'is' use string method 'includes'
+let newStrings = strings.filter(str => str.includes('is'));
+console.log(newStrings);
 
 // Find all the words that contain 'is' use string method 'indexOf'
-
+let stringIs = strings.filter(str => (str.indexOf('is') === -1) ? false : true);
 
 // Check if all the numbers in numbers array are divisible by three use array method (every)
-let numDivThree = numbers.every(function(num){
-    return (num % 3 == 0);
-});
+numbers.every(num => (num % 3 === 0));
 
 //  Sort Array from smallest to largest
-let assendingNumber = numbers.sort(function(a, b) {
-    return a - b;
-});
-console.log(assendingNumber);
+let acendingNumbers = numbers.sort((num1, num2) => num1 - num2);
+
+
 
 // Remove the last word in strings
 strings.pop();
-console.log(strings);
+
 
 // Add a new word in the array
 strings.push('words');
-console.log(strings);
+
 
 // Remove the first word in the array
 strings.shift();
-console.log(strings);
 
-// Place a new word at the start of the array use (upshift) // unshift ??
-strings.unshift('JS');
-console.log(strings);
+// Place a new word at the start of the array use (unshift)
+strings.unshift('this');
+
 
 // Make a subset of numbers array [18,9,7,11]
-let subsetNum = numbers.splice(3, 4);
-console.log(subsetNum);
-
+let subsetNumbers =  numbers.splice(3, 4);
+console.log(subsetNumbers);
 // Make a subset of strings array ['a','collection']
-let subStr = strings.splice(2,2);
-console.log(subStr);
+let subsetString = strings.splice(2, 2);
 
 // Replace 12 & 18 with 1221 and 1881
-var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 numbers.splice(1, 1, 1221);
 numbers.splice(3, 1, 1881);
-console.log(numbers);
 
 // Replace words with string in strings array
-var strings = ['this','is','a','collection','of','words'];
-strings.splice(5,1,'string');
-console.log(strings);
+strings.splice(5, 1, 'strings');
 
 
 // Customers Array

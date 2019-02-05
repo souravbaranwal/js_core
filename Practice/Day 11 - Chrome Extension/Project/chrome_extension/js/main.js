@@ -9,7 +9,6 @@ let todos = JSON.parse(localStorage.getItem('item')) || [{
 ];
 displayTodo(todos);
 localStorage.setItem('item', JSON.stringify(todos));
-
 let todoInput = document.querySelector('#todo-text');
 let todoList = document.querySelector('#lists');
 let addTodoBtn = document.querySelector('#add-todo');
@@ -19,15 +18,20 @@ let addTodoBtn = document.querySelector('#add-todo');
 function displayTodo(array = []) {
     document.querySelector('ul').innerHTML = '';
 
-
     array.forEach((todo, index) => {
         let list = document.createElement('li');
         let checkBox = document.createElement('input');
         checkBox.type = 'checkbox';
         checkBox.setAttribute('data-index', index);
         checkBox.checked = todo.todoStatus;
+        let checkBoxStyling = document.createElement('span');
+        checkBoxStyling.classList.add('checkMark');
         let checkboxParent = document.createElement('span');
+        checkboxParent.classList.add('checkboxParent');
+        
         checkboxParent.appendChild(checkBox);
+        checkboxParent.appendChild(checkBoxStyling);
+        
         
         let todoText = document.createElement('span');
         todoText.setAttribute('data-index', index);
@@ -38,7 +42,7 @@ function displayTodo(array = []) {
             }
 
         let close = document.createElement('span');
-        close.innerHTML = `<i class="fas fa-window-close" style="color:rgb(182, 182, 182);font-size:15px"></i>`;
+        close.innerHTML = `<i class="fas fa-window-close" ></i>`;
         close.setAttribute('data-index', index);
 
         checkboxParent.appendChild(checkBox);
@@ -93,8 +97,8 @@ let editList = event =>{
         input.focus();
         parent.replaceChild(input, event.target);
         input.addEventListener('keyup', event => {
-            console.log(event.target);
-            console.log(label);
+            
+            
             if (event.keyCode === 13) {
                 label.textContent = event.target.value;
                 parent.replaceChild(label, input);
@@ -111,9 +115,6 @@ let editList = event =>{
 }
 
 
-
-
-
 //   Random Quote
   let quoteSection = document.querySelector('.quoteSection');
   let pTag = document.createElement('p');
@@ -126,6 +127,7 @@ function text() {
     pTag.innerText = `"${quotes[generate].quote}"   By ${quotes[generate].author}`;
 }
 setInterval(text,10000);
+
 
 // Event Listners
 addTodoBtn.addEventListener('click', addTodo);
@@ -157,5 +159,27 @@ const hourDegrees = ((mins / 12) * 360) ;
 hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
 }
-setInterval(setDate, 1000);
+setInterval(setDate, 2000);
+
+// user Input 
+
+let greetInput = document.querySelector('#greetInput');
+let greetText = document.querySelector('#greetText');
+
+if (JSON.parse(localStorage.getItem('userName')) == undefined) {
+    greetInput.style.display = 'inline-block';
+} else {
+    greetText.textContent = `Hello ${JSON.parse(localStorage.getItem('userName'))}`;
+}
+
+let setUsername = e => {
+    if (e.keyCode === 13) {
+        localStorage.setItem('userName', JSON.stringify(greetInput.value));
+        greetInput.style.display = 'none'; 
+        greetText.textContent = `Hello ${JSON.parse(localStorage.getItem('userName'))}`;
+    } 
+}
+greetInput.addEventListener('keyup', setUsername);
+
+
 
