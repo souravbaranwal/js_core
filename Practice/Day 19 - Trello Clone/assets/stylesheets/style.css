@@ -1,0 +1,13 @@
+root {
+    display: grid;
+    grid-auto-flow: column;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 300px)); */
+}
+
+.board {
+    /* width: 100vw; */
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 40px;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 300px)); */
+}
