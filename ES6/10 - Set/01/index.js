@@ -1,17 +1,25 @@
 // Set
 let animals = new Set(["🐷", "🐢", "🐷", "🐷"]);
+// ["🐷", "🐢"] as set onlystore values those are unique
 
 // guess the output of animals
 
 const text =
   "The Set object lets you store unique values of any type, whether primitive values or object references.";
 
+let splittedText = text.split('');
+let uniqueText = new Set(splittedText);
+uniqueText.size;
+
 // remove all the duplicate letters from the text variable and give the length of string.
 
 // Use for ... of to iterate ove the above result and console.log the characters
-
+let uniqueTextArray = [...new Set(splittedText)];
+for (unitText of uniqueTextArray) {
+  console.log(unitText);
+}
 //Implement below methods using set and methods of set like add, delete, has etc.
-var setA = new Set([1, 2, 3, 4]),
+var setA = [...new Set([1, 2, 3, 4])],
   setB = new Set([2, 3]),
   setC = new Set([3, 4, 5, 6]);
 // Implement isSuperSet function to check if `setA` is super set of `setA`
@@ -25,3 +33,30 @@ intersection(setA, setC); // => Set [3, 4]
 
 // Implement difference function that gives you the difference of two set
 difference(setA, setC); // => Set [1, 2]
+
+
+
+let numArray = [1, 2, 3, 4];
+let callback = i => console.log(i);
+
+function async (numArray, callback) {
+  setTimeout(() => {
+    numArray.forEach(callback);
+  }, 1000);
+}
+async(numArray, callback);
+console.log('hellow World');
+
+
+
+let numArray = [1, 2, 3, 4];
+let callback = i => console.log(i);
+
+function async(numArray, callback) {
+  numArray.forEach(elm => 
+    setTimeout(() => {
+      callback(elm);
+    }, 1000))
+}
+async(numArray, callback);
+console.log('hellow World');

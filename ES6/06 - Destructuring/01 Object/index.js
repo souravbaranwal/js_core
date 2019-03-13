@@ -5,6 +5,8 @@ const inventory = {
   pants: 5
 };
 // Access all the key value and assign the value to variables using destructuring.
+var {shoes, socks, shirts, pants} = inventory;
+
 
 const users = {
   name: "Sachin",
@@ -15,3 +17,8 @@ const users = {
 };
 
 // Destructure the social profiles i.e twitter and facebook using destructuring
+var {
+  social: newSocial
+} = users;
+
+var {twitter, facebook} = newSocial;

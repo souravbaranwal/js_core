@@ -18,7 +18,7 @@ const user = {
 const userProxy = new Proxy(user, {
   get(target, key) {
     return target[key].toUpperCase();
-    // You ca hijack the access property and change the output the way you want.
+    // You can hijack the access property and change the output the way you want.
   }
   set(target, key, value){
     return target[key] = value.toUpperCase().trim();

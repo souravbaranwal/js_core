@@ -1,20 +1,20 @@
 const button = document.querySelector(".push_me");
 
 // Make this code work and why it was not working.
-button.addEventListener("click", () => {
+button.addEventListener("click", function() {
   this.classList.toggle("on");
 });
 
 // Make this work when you `students.myScore()` it should alert you the marks.
 const students = {
   marks: 95,
-  myScore: () => {
+  myScore: function() {
     alert(this.marks);
   }
 };
 
 // arguments is a special property inside a function that gives access to all the arguments passed.
-const add = () => {
+const add = function() {
   return Array.from(arguments).reduce(
     (acc, currentValue) => acc + currentValue
   );

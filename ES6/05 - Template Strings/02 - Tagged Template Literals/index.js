@@ -5,6 +5,25 @@ const abbreviation = {
   JS: "JavaScript"
 };
 
-//The abbreviation for HTML, CSS and JS. Hover to see :🙎‍♂️
-// On hover over HTML should show `Hyper Text Markup Language`
-// Use the abbr tag
+
+
+let body = document.querySelector('body');
+
+function abbrFunction(strings, ...values) {
+  console.log(values);
+  console.log(strings);
+  let abbriviate = values.map(value => {
+    return `<abbr title = "${abbreviation[value]}">${value}</abbr>`
+  })
+  return values;
+  console.log(values);
+    return strings.reduce((sentence, string, i) => `${sentence}${string}${abbriviate[i] || ''}`, '');
+
+
+}
+
+let htmlAbbr = abbrFunction `${HTML}, ${CSS},${JS}`;
+
+
+
+
