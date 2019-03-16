@@ -5,10 +5,13 @@ let userNameBox = document.querySelector('.userNameBox');
 let avatar = document.querySelector('.avatar');
 let userDataSection = document.querySelector('.userDataSection');
 let followDetails = document.querySelector('.followDetails');
+var repoDetails = document.querySelector('.repoDetails');
+
 var userName;
 
 
 function displayFollows(data) {
+    repoDetails.innerHTML = '';
     var htmlToAppend = '';
     data.map(elm => {
         htmlToAppend +=
@@ -21,18 +24,17 @@ function displayFollows(data) {
 }
 
 function displayRepos(data) {
+
     var htmlToAppend = '';
     console.log(data);
+    followDetails.innerHTML = ``;
     data.map(elm => {
         htmlToAppend += `<div class="reposBox">
           <p>${elm.name}</p>
         </div>`
-        console.log(elm.name);
     })
-    userDataSection.innerHTML = `<div class="repoDetails">
-        </div>`;
-    var repoDetails = document.querySelector('.repoDetails');
     repoDetails.innerHTML = htmlToAppend;
+    console.log(htmlToAppend);
 }
 
 function displayFollowersData() {
@@ -56,7 +58,8 @@ function displayData(data) {
       <button type="button" class="followersBtn">followers</button>
       <button type="button" class="followingBtn">following</button>
       <button type="button" class="repoBtn">repositories</button>`;
-    userInput.value = '';
+    // userInput.value = '';
+    userInput.remove();
     let followersBtn = document.querySelector('.followersBtn');
     let followingBtn = document.querySelector('.followingBtn');
     let repoBtn = document.querySelector('.repoBtn');
